@@ -186,7 +186,7 @@ footer {
 
 .footer-container{
     display: flex;
-    flex-direction: row;
+    align-items: baseline;
 }
 
 .social-info{
@@ -201,16 +201,17 @@ footer {
     fill: var(--social-icons-color-active);
 }
 
+.social-info .social-icons-links-list{
+    margin-top: 20px;
+}
+
 .follow-us{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
     color: var(--footer-social-color);
-
-    margin-bottom: 20px;
 }
 
 .address-info{
@@ -268,7 +269,8 @@ footer address{
     background-color: var(--hero-background-color);
     padding-top: 200px;
     padding-bottom: 200px;
-    background-size: cover;
+    width: 1600px;
+    margin: 0 auto;
 }
 
 .hero .hero-title{
@@ -320,7 +322,9 @@ footer address{
 .features-icons{
     width: 270px;
     height: 120px;
-    padding: 25px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
     background-color: var(--features-icon-bg-color) ;
 }
@@ -428,7 +432,7 @@ footer address{
 }
 
 
-.social-icons-links-wrapper{
+.social-icons-links-list{
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
@@ -451,12 +455,12 @@ footer address{
 }
 
 .social-links:hover,
-.social-icons:focus{
+.social-links:focus{
     background-color: var(--active-link-color);
 }
 
 .social-links:hover > .social-icons,
-.social-icons:focus > .social-icons{
+.social-links:focus > .social-icons{
     fill: var(--social-icons-color-active);
 }
 
@@ -475,7 +479,7 @@ footer address{
     margin-bottom: 50px;
 }
 
-.clients-cards{
+.clients-cards-list{
     display: flex;
     justify-content: space-between;
 }
@@ -556,9 +560,15 @@ footer address{
 .project-list-item{
     width: 370px;
     background: var(--project-cards-background-color);
+    flex-basis: calc((100% - 60px)/3);
     margin-left: 30px;
     margin-bottom: 30px;
     flex-basis: calc((100% - 60px)/3);
+}
+
+
+.project-link{
+    display: block; 
 }
 
 .project-list-item:nth-of-type(3n+1){
@@ -602,8 +612,8 @@ footer address{
     display: block;
 }
 
-.project-list-item:hover, 
-.project-list-item:focus{
+.project-link:hover, 
+.project-link:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
